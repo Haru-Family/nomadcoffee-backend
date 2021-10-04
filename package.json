@@ -4,7 +4,8 @@
   "description": "",
   "scripts": {
     "dev": "nodemon --exec babel-node server.js",
-    "migrate": "prisma migrate dev"
+    "migrate": "prisma migrate dev",
+    "studio": "npx prisma studio"
   },
   "repository": {
     "type": "git",
@@ -21,11 +22,13 @@
     "@graphql-tools/load-files": "6.4.0",
     "@prisma/client": "3.1.1",
     "apollo-server": "3.3.0",
+    "apollo-server-express": "3.3.0",
     "bcrypt": "5.0.1",
     "dotenv": "10.0.0",
     "graphql": "15.6.0",
     "graphql-tools": "8.2.0",
-    "jsonwebtoken": "8.5.1"
+    "jsonwebtoken": "8.5.1",
+    "morgan": "1.10.0"
   },
   "devDependencies": {
     "@babel/core": "7.15.5",

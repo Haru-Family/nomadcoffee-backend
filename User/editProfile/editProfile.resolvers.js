@@ -1,10 +1,10 @@
 import bcrypt from "bcrypt";
 import client from "../../client";
-import { protectedResolver } from "../user.utils";
+import { protectedResolver } from "../users.utils";
 
 export default {
   Mutation: {
-    editProfile: protectedResolver(async (_, {password: newPassword, avatarURL }) => {
+    editProfile: protectedResolver(async (_, {password: newPassword, avatarURL },{loggedInUser}) => {
             let uglyPassword = null;
             if (newPassword) {
                 uglyPassword = await bcrypt.hash(newPassword, 10);
